@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:weightSum="10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+<!--            <com.example.clock.CustomAnalogClock-->
+<!--                android:layout_width="280dp"-->
+<!--                android:layout_height="280dp"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:onClick="change"/>-->
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="00:00:00"
+            android:id="@+id/digital_time"
+            android:textSize="65dp"
+            android:format12Hour="hh:mm:ss"
+            tools:targetApi="jelly_bean_mr1" />
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/digital_time"
+            android:text="pm"
+            android:id="@+id/am_pm"
+            android:textSize="20dp"
+            android:layout_marginTop="-43dp"
+            android:layout_toRightOf="@+id/digital_time"
+            android:format12Hour="a"
+            tools:ignore="NewApi" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#2E2E2E"
+            android:layout_centerHorizontal="true"
+            android:text="No alarm"
+            android:id="@+id/alarms_status"
+            android:textSize="20.5dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.5"
+        android:paddingHorizontal="10dp">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_gravity="center"
+            android:id="@+id/alarmList">
+        </ListView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/blue"
+            android:background="@drawable/ripple_button"
+            android:src="@drawable/plus"
+            />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

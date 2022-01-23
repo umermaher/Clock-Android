@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.clock">
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/clock_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/clock_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Clock">
+        <activity android:name=".EditTimeZoneActivity"></activity>
+        <activity android:name=".AddTimeZoneActivity" />
+        <activity android:name=".DeleteAlarmActivity" />
+        <activity android:name=".AddAlarm" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"/> <!-- android:process=":remote" -->
+        <receiver
+            android:name=".timerNotificationReceiver"
+            android:enabled="true" />
+        <receiver android:name=".AlarmStopReceiver" />
+        <receiver android:name=".AlarmSnoozeReceiver" />
+
+        <service
+            android:name=".AlarmServices"
+            android:enabled="true" />
+    </application>
+
+</manifest>

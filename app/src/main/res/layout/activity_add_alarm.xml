@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@color/white"
+    tools:context=".AddAlarm">
+    <include layout="@layout/add_toolbar"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5">
+
+            <TimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="25dp"
+                android:timePickerMode="spinner"
+                android:id="@+id/time_picker"
+                android:theme="@style/TimePickerStyle"
+                />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:paddingHorizontal="26dp">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:id="@+id/feature_list"
+            android:layout_gravity="center"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/feature_list"
+            android:paddingHorizontal="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Vibrate"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/light_blackish"
+                android:id="@+id/feature"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                />
+            <Switch
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="vibrate"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

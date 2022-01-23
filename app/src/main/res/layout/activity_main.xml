@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+    <include layout="@layout/activity_main_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.2"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:id="@+id/ss"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="#F4F4F4"
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/clock_bottom_navigation"
+        app:itemTextColor="@color/blue"
+        />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="0.8"-->
+<!--        android:weightSum="4"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+
+<!--            android:id="@+id/alarm_btn"-->
+<!--            android:src="@drawable/alarm_icon"-->
+<!--            android:background="@drawable/main_ripple_btn"-->
+<!--            android:scaleType="center"/>-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:id="@+id/world_clock_btn"-->
+<!--            android:src="@drawable/world"-->
+<!--            android:background="@drawable/main_ripple_btn"-->
+<!--            android:scaleType="center"/>-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:id="@+id/stop_watch_btn"-->
+<!--            android:src="@drawable/timer"-->
+<!--            android:scaleType="center"-->
+<!--            android:background="@drawable/main_ripple_btn"/>-->
+<!--        <ImageButton-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:id="@+id/timer_watch_btn"-->
+<!--            android:src="@drawable/av_timer"-->
+<!--            android:scaleType="center"-->
+<!--            android:background="@drawable/main_ripple_btn"-->
+<!--            android:text="Timer"/>-->
+<!--    </LinearLayout>-->
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:weightSum="10">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:layout_centerInParent="true"
+            android:textSize="65dp"
+            android:id="@+id/timer"
+            android:textColor="#303030"
+            android:fontFamily="sans-serif"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.9"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/min_num"
+                android:theme="@style/TimePickerStyle"/>
+
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sec_num"
+                android:theme="@style/TimePickerStyle"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1">
+        <ImageView
+            android:id="@+id/toggle_timer_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:scaleType="center"
+            android:background="@drawable/blue_background"
+            android:src="@drawable/start"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/timer_reset_btn"
+            android:src="@drawable/reset"
+            android:layout_toLeftOf="@+id/toggle_timer_btn"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/ripple_button"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

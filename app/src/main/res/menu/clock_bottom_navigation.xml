@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_alarm"
+        android:icon="@drawable/alarm_icon"
+        android:title="Alarm" />
+    <item
+        android:title="World Clock"
+        android:icon="@drawable/world"
+        android:id="@+id/nav_world_clock"/>
+    <item
+        android:id="@+id/nav_stopwatch"
+        android:title="Stopwatch"
+        android:icon="@drawable/timer"/>
+    <item
+        android:id="@+id/nav_timer"
+        android:title="Timer"
+        android:icon="@drawable/av_timer"/>
+</menu>

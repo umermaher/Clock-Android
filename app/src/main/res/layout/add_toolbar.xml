@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white">
+    <ImageView
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/cancel_alarm"
+        android:id="@+id/cancel"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ripple_button"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:tint="#434343"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alarm"
+        android:layout_toRightOf="@+id/cancel"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:textSize="24dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:id="@+id/toolbar_title"
+        />
+    <ImageView
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/save_alarm"
+        android:id="@+id/save"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ripple_button"
+        android:tint="#434343"
+        />
+
+</RelativeLayout>

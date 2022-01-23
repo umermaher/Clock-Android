@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="TimePickerStyle" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="title">false</item>
+        <item name="android:textColorPrimary">#052EC8</item>
+        <item name="colorPrimaryDark">#052EC8</item>
+        <item name="android:textColorSecondary">#00232EEC</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:numbersTextColor" tools:targetApi="lollipop">@color/blue</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+        <item name="colorAccent">@color/blue</item>
+    </style>
+    <!-- Base application theme. -->
+
+</resources>
